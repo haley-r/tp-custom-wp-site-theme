@@ -1,15 +1,14 @@
-<?php
-
-get_header();
+<?php get_header();
 
 while (have_posts()) {
     the_post(); ?>
-    <h1>This is a page, not a post.</h1>
-    <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+    
+    <!-- get the title of the page and put it at the top -->
+    <h1 class="page-banner__title"><?php the_title(); ?></h1>
+        <!-- this content comes from the wp admin in-browser -->
+        <?php the_content(); ?>
 <?php
 }
-
-get_footer();
-
 ?>
+
+<?php get_footer(); ?>
