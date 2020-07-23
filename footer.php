@@ -2,7 +2,7 @@
 <footer>
     <?php
     wp_nav_menu(array(
-        'theme_location' => 'headerMenuLocation'
+        'theme_location' => 'footerMenuLocation'
     ));
     ?>
     <p>&copy copyright Tim Phillips Law 2020</p>

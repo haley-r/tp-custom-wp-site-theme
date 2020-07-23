@@ -28,5 +28,4 @@
             ));
             ?>
         </nav>
-        <p>maybe add login/sign up buttons here</p>
     </header>
