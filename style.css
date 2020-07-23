@@ -6,6 +6,135 @@ Version: 1.0
 
  /* to add image, include file named screenshot.png in this folder */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Rose:wght@300;400;700&display=swap');
+
+
+ /* border-box reset from css tricks */
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* custom styles */
+/* site colors */
+:root{
+    --main-blue: rgba(4, 34, 43, 0.95);
+    }
  body{
-     color: purple;
+    font-family: 'Red Hat Display', sans-serif;
+    color: var(--main-blue);
+    /* top padding based on height of header */
+    padding-top: 8em;
+    width: 100vw;
+    margin: 0;
  }
+ .page-background-image{
+     /* this should be better, not in html probably */
+     background-image: url('occupy oakland.jpg');
+     background-size: 100vw auto;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: -10;
+ }
+ .page-background-gradient{
+     background: linear-gradient(0deg, rgb(1, 21, 24) 0%, rgb(1, 21, 24) 20%, rgba(0,0,0,.5) 100%);
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: -10;
+ }
+ header{
+     color: white;
+     background-color: var(--main-blue);
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 6.5em;
+     padding: 1em;
+ }
+    header h1 {
+        /* replace with vector logo image instead? */
+        margin: 0;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 2rem;
+    }
+        .law-office-of{
+            display: block;
+            font-size: 1.3rem;
+            letter-spacing: 8px;
+        }
+.main-content {
+    margin: 0 8vw;
+}
+.main-content .floating-block{
+    background-color: rgba(219, 230, 233, 0.8);
+    padding: 0;
+    border-radius: 1rem;
+    margin: 2rem 0 4rem 0;
+    font-size: 3vw;
+    box-shadow: 0px 0px 25px var(--main-blue);
+}
+h3{
+    margin: 0;
+    padding-top: 3vw;
+    text-align: center;
+}
+ a {
+     text-decoration: none;
+     color: inherit;
+    }
+    a:visited {
+        color: inherit;
+        }
+.main-content ul{
+    list-style-type: square;
+    padding-left: 15vw;
+    padding-bottom: .75em;
+    margin: 1em 0 0 0;
+    font-size: 1em;
+}
+.main-content ul li{
+    margin-bottom: .75em;
+    padding-right: 10vw;
+}
+.intro {
+    margin: 3rem 0 5rem 0;
+    color: rgb(219, 230, 233);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+img {
+    width: 500px;
+}
+footer{
+    margin-top: 5em;
+    color: rgba(219, 230, 233, 0.9);
+}
+    footer nav{
+        margin-bottom: 80px;
+    }
+    footer nav ul{
+        list-style-type: none;
+        margin: 0 auto 10px auto;
+        padding: 0;
+        width: 80vw;
+    }
+    footer nav ul li{
+        display: inline;
+        font-size: 1.2em;
+        margin: 0 3vw;
+        padding: 0;
+    }
+    footer p{
+        text-align: center;
+    }
