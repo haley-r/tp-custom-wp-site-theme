@@ -32,7 +32,7 @@ Version: 1.0
  }
  .page-background-image{
      /* this should be better, not in html probably */
-     background-image: url('occupy oakland.jpg');
+     background-image: url('/images/occupy_oakland.jpg');
      background-size: 100vw auto;
      width: 100vw;
      height: 100vh;

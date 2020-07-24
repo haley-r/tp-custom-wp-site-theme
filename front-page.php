@@ -2,14 +2,16 @@
 
 <!-- the html content of the home page would go here -->
 
-<div class="page-background-image">
-    <div class="page-background-gradient"></div>
+<div class="page-background-image" style="background-image: url(<?php echo get_theme_file_uri('/images/occupy_oakland.jpg'); ?>);">
+    <div class="page-background-gradient">
+    </div>
 </div>
 
 <section class="main-content">
     <h2 class="intro">
         Tim Phillips is an experienced trial lawyer who listens to his clients.
     </h2>
+
     <div class="floating-block">
         <h3>He gathers and evaluates information about:</h3>
         <ul>
