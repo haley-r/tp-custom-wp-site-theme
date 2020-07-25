@@ -1,7 +1,8 @@
 <?php
     function site_files(){
         wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Red+Rose&display=swap');
-        wp_enqueue_style('university_main_syles', get_stylesheet_uri());
+        wp_enqueue_script('main-university-js', 'http://localhost:4000/bundled.js', NULL, '1.0', true);
+    
     }
     add_action('wp_enqueue_scripts', 'site_files');
 
