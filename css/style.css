@@ -163,8 +163,27 @@ footer{
         .content-block figure img{
             border-radius: 10px;
         }
-    
-
+/* practice areas page styles */
+#menu-practice-areas-menu{
+    list-style-type: none;
+    padding: 0;
+}
+    #menu-practice-areas-menu li{
+    background-color: rgba(219, 230, 233, 0.8);
+    border-radius: 2rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 28px;
+    box-shadow: 0px 0px 25px var(--main-blue);
+    }
+    #menu-practice-areas-menu li a{
+        display: block;
+        padding: 16px;
+        text-align: center;
+        width: 100%;
+    }
+    #menu-practice-areas-menu li a:hover{
+        font-weight: bold;
+    }
 /* front page styles */
         /* use flex for the boxes? idk? just for larger size probably*/
 

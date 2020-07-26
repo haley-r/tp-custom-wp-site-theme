@@ -15,7 +15,7 @@ while (have_posts()) {
         // if it is a child page, it will return a # (the id of its parent page)
         $theParent = wp_get_post_parent_id(get_the_ID());
         // if it's the practice areas page (contains /practice-areas in permalink but isn't a subpage)
-        // then return the content html differently for styling purposes
+        // then return the content html differently (just the menu, no 'content') for styling purposes
         if(strstr($thePermalink, '/practice-areas') && $theParent==0){
             wp_nav_menu(array(
                 'theme_location' => 'practiceAreasPage'
@@ -23,9 +23,7 @@ while (have_posts()) {
         } else {
             ?>
             <div class="content-block">
-                <?php the_content(); 
-                echo get_page_link();?>
-
+                <?php the_content(); ?>
             </div>
             <?php
         }
