@@ -2,7 +2,7 @@
 @import "normalize.css";
 @import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Rose:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
  /* border-box reset from css tricks */
  html {
   box-sizing: border-box;
@@ -21,8 +21,8 @@
     color: var(--main-blue);
     background-color: var(--main-blue);
     padding-top: 120px;
-    width: 100vw;
-    margin: 0;
+    /* width: 100vw; */
+    margin: 0 5vw;
  }
  .page-background-image{
      /* CHECK_THIS: maybe get from media background*/
@@ -100,6 +100,57 @@
         header.header-menu-active nav ul ul{
             display: none;
         }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    a:visited {
+        color: inherit;
+        }
+/* page styles */
+.page-title{
+    color: white;
+    font-size: 8vw;
+    text-align: center;
+}
+.content-block{
+    background-color: rgba(219, 230, 233, 0.8);
+    border-radius: 1rem;
+    margin: 1rem 0 4rem 0;
+    padding: 28px;
+    font-size: 22px;
+    box-shadow: 0px 0px 25px var(--main-blue);
+    font-family: 'Red Hat Text', sans-serif;
+}
+    .content-block p{
+        margin-top: 0;
+    }
+    .content-block figure{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+        .content-block figure img{
+            border-radius: 12px;
+        }
+    
+
+/* front page styles */
+        /* use flex for the boxes? idk? just for larger size probably*/
+
+/* blog styles */
+
+/* blog post styles */
+
+/* tablet/medium screen size styles */
+
+/* desktop/large screen size styles */
+
+
+
+
+/* I'm not sure what from this below is what keeping because its based on class names in front-page.php that will soon be replaced by whatever wordpress supplies as the content. but i'll try to match it above! */
+/*
 .main-content {
     margin: 0 8vw;
 }
@@ -116,13 +167,7 @@ h3{
     padding-top: 3vw;
     text-align: center;
 }
- a {
-     text-decoration: none;
-     color: inherit;
-    }
-    a:visited {
-        color: inherit;
-        }
+
 .main-content ul{
     list-style-type: square;
     padding-left: 15vw;
@@ -165,3 +210,4 @@ footer{
     footer p{
         text-align: center;
     }
+    */
