@@ -202,6 +202,58 @@ form button{
     background-color: var(--main-blue) !important;
 }
 /* front page styles */
+.home{
+    text-align: left;
+}
+    .home .page-title{
+        margin: 8rem 0 10rem 0;
+        /* height: 100vh;
+        margin: 20vh auto 0 auto; */
+        color: rgb(219, 230, 233);
+        font-size: 11.5vw;
+        padding: 2vw;
+        font-weight: bolder;
+        text-align: left;
+    }
+    .home h3{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 6vw;
+    }
+    /* make floating visual elements from block groups instead of whole content block */
+    .home .content-block{
+        background-color: rgba(0,0,0,0);
+        border-radius: 1rem;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+        .home .wp-block-group{
+            background-color: rgba(219, 230, 233, 0.8);
+            box-shadow: 0px 0px 25px var(--main-blue);
+            border-radius: 1rem;
+            margin: 1rem 2vw 3rem 2vw;
+            padding: 1em 18px 0 18px;
+            font-family: 'Red Hat Display', sans-serif;
+        }
+            .home .wp-block-group h3{
+                font-size: 6.3vw;
+            }
+            .home .wp-block-group ul{
+                list-style-type: none;
+                padding-bottom: .75em;
+                padding-left: 0;
+                margin: 1em 0 0 0;
+                font-size: 5.2vw;
+            }
+                .home .wp-block-group ul li{
+                    text-align: center;
+                    margin: 1.25em 0;
+                }
+
+
+
         /* use flex for the boxes? idk? just for larger size probably*/
 
 /* blog styles */
@@ -212,47 +264,4 @@ form button{
 
 /* desktop/large screen size styles */
 
-
-
-
-/* I'm not sure what from this below is what keeping because its based on class names in front-page.php that will soon be replaced by whatever wordpress supplies as the content. but i'll try to match it above! */
-/*
-.main-content {
-    margin: 0 8vw;
-}
-.main-content .floating-block{
-    background-color: rgba(219, 230, 233, 0.8);
-    padding: 0;
-    border-radius: 1rem;
-    margin: 2rem 0 4rem 0;
-    font-size: 3vw;
-    box-shadow: 0px 0px 25px var(--main-blue);
-}
-h3{
-    margin: 0;
-    padding-top: 3vw;
-    text-align: center;
-}
-
-.main-content ul{
-    list-style-type: square;
-    padding-left: 15vw;
-    padding-bottom: .75em;
-    margin: 1em 0 0 0;
-    font-size: 1em;
-}
-.main-content ul li{
-    margin-bottom: .75em;
-    padding-right: 10vw;
-}
-.intro {
-    margin: 3rem 0 5rem 0;
-    color: rgb(219, 230, 233);
-    font-size: 3rem;
-    font-weight: bolder;
-}
-img {
-    width: 500px;
-}
-
-    */
+    
