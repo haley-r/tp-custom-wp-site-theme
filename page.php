@@ -1,11 +1,14 @@
-<?php get_header();
+<?php get_header(); ?>
 
+<div class="page-background-image" style="background-image: url(<?php echo get_theme_file_uri('/images/occupy_oakland.jpg'); ?>);">
+    <div class="page-background-gradient">
+    </div>
+</div>
+
+<?php
 while (have_posts()) {
     the_post(); ?>
-    
-    <!-- get the title of the page and put it at the top -->
-    <h1 class="page-banner__title"><?php the_title(); ?></h1>
-        <!-- this content comes from the wp admin in-browser -->
+    <h1 class="page-title"><?php the_title(); ?></h1>
         <?php the_content(); ?>
 <?php
 }
