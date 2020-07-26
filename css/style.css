@@ -44,6 +44,14 @@
      left: 0;
      z-index: -10;
  }
+ a {
+        text-decoration: none;
+        color: inherit;
+    }
+    a:visited {
+        color: inherit;
+        }
+/* header styles */
  header{
      color: white;
      background-color: var(--main-blue-95);
@@ -78,7 +86,7 @@
         header nav ul li {
             margin-bottom: 2em;
         }
-        header nav ul li:hover {
+        nav ul li:hover {
             font-weight: bold;
         }
         header nav ul ul{
@@ -100,13 +108,35 @@
         header.header-menu-active nav ul ul{
             display: none;
         }
-    a {
-        text-decoration: none;
-        color: inherit;
+/* footer styles */
+footer{
+    color: white;
+}
+    footer nav{
+        width: 80%;
+        margin: 0 auto 50px auto;
+        padding: 2em 0 1em 0;
+        border-top: .5px solid rgb(161, 109, 45);
+        border-bottom: .5px solid rgb(161, 109, 45);
     }
-    a:visited {
-        color: inherit;
+    footer nav ul{
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+    footer nav ul li{
+        text-align: center;
+        font-size: 1.4em;
+        margin: 0 3vw 16px 3vw;
+        padding: 0;
+    }
+        footer nav ul li.current-menu-item{
+            display: none;
         }
+    footer p{
+        text-align: center;
+        color: rgba(219, 230, 233, 0.8);
+    }
 /* page styles */
 .page-title{
     color: white;
@@ -116,7 +146,7 @@
 .content-block{
     background-color: rgba(219, 230, 233, 0.8);
     border-radius: 1rem;
-    margin: 1rem 0 4rem 0;
+    margin: 1rem 0 3rem 0;
     padding: 28px;
     font-size: 22px;
     box-shadow: 0px 0px 25px var(--main-blue);
@@ -188,26 +218,5 @@ h3{
 img {
     width: 500px;
 }
-footer{
-    margin-top: 5em;
-    color: rgba(219, 230, 233, 0.9);
-}
-    footer nav{
-        margin-bottom: 80px;
-    }
-    footer nav ul{
-        list-style-type: none;
-        margin: 0 auto 10px auto;
-        padding: 0;
-        width: 80vw;
-    }
-    footer nav ul li{
-        display: inline;
-        font-size: 1.2em;
-        margin: 0 3vw;
-        padding: 0;
-    }
-    footer p{
-        text-align: center;
-    }
+
     */
