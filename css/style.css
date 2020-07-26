@@ -79,12 +79,13 @@
     header nav ul{
         display: none;
         list-style-type: none;
-        font-size: 9vw;
-        padding-left: 8vw;
-        padding-top: 1em;
+        font-size: 2em;
+        padding-left: 0;
+        padding-top: 2em;
     }
         header nav ul li {
             margin-bottom: 2em;
+            text-align: center;
         }
         nav ul li:hover {
             font-weight: bold;
@@ -167,6 +168,7 @@ footer{
 #menu-practice-areas-menu{
     list-style-type: none;
     padding: 0;
+    margin-bottom: 4em;
 }
     #menu-practice-areas-menu li{
     background-color: rgba(219, 230, 233, 0.8);
@@ -191,6 +193,7 @@ form label, form input, form textarea, form button{
     font-weight: normal !important;
     border: none !important;
     border-radius: 1em !important;
+    width: 100% !important;
 }
 form textarea{
     min-height: 8em;
@@ -281,13 +284,33 @@ form button{
         padding: 1em;
         margin-bottom: 4em;
     }
-
 /* blog styles */
 
 /* blog post styles */
 
 /* tablet/medium screen size styles */
-
+@media screen and (min-width: 600px){
+    /* home page block groups smaller text */
+    .home .page-title{
+        font-size: 9vw;
+    }
+            .home .wp-block-group h3{
+                font-size: 1.2em;
+            }
+            .home .wp-block-group ul{
+                font-size: 1em;
+            }
+            .home .wp-block-group ul li{
+                margin-bottom: 1.75em;
+            }
+    /* smaller minimum comment box height and full width fields */
+    form label, form input, form textarea, form button{
+        max-width: none !important;
+    }
+    form textarea{
+        min-height: 5em;
+    }
+}
 /* desktop/large screen size styles */
         /* use flex for the boxes? idk? just for larger size probably*/
 
