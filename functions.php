@@ -11,6 +11,7 @@
     function site_features(){
         register_nav_menu('headerMenuLocation', 'Header Menu Location');
         register_nav_menu('footerMenuLocation', 'Footer Menu Location');
+        register_nav_menu('practiceAreasPage', 'Practice Areas Page');
         add_theme_support('title-tag');
     }
     add_action('after_setup_theme', 'site_features');

@@ -17,7 +17,9 @@ while (have_posts()) {
         // if it's the practice areas page (contains /practice-areas in permalink but isn't a subpage)
         // then return the content html differently for styling purposes
         if(strstr($thePermalink, '/practice-areas') && $theParent==0){
-            the_content();
+            wp_nav_menu(array(
+                'theme_location' => 'practiceAreasPage'
+            ));
         } else {
             ?>
             <div class="content-block">
