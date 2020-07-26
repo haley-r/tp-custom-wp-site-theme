@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,11 +12,12 @@
     <header>
         <h1 class="site-title">
             <a href="<?php echo site_url(); ?>">
-                <span class="law-office-of">Law Office Of</span> 
+                <span class="law-office-of">Law Office Of</span>
                 Tim Phillips
             </a>
         </h1>
-        <nav>
+        <nav class="header-menu">
+            <i class="fa fa-bars fa-3x" id="menu-toggle-icon" aria-hidden="true"></i>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'headerMenuLocation'
@@ -23,4 +25,3 @@
             ?>
         </nav>
     </header>
-    
