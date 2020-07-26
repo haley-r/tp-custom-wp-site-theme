@@ -152,13 +152,13 @@ footer{
     box-shadow: 0px 0px 25px var(--main-blue);
     font-family: 'Red Hat Text', sans-serif;
 }
-    /* .content-block p{
+    .content-block p{
         margin-top: 0;
-    } */
+    }
     .content-block figure{
         width: 100%;
         max-width: 500px;
-        margin: 0 auto;
+        margin: 0 auto 1em auto;
     }
         .content-block figure img{
             border-radius: 10px;
@@ -184,6 +184,23 @@ footer{
     #menu-practice-areas-menu li a:hover{
         font-weight: bold;
     }
+/* contact page form styles */
+form label, form input, form textarea, form button{
+    /* CHECK_THIS: a way to do without '!important'? */
+    font-size: 1em !important;
+    font-weight: normal !important;
+    border: none !important;
+    border-radius: 1em !important;
+}
+form textarea{
+    min-height: 8em;
+}
+form button{
+    width: 50% !important;
+    margin: 1em 25% 0 25% !important;
+    color: white !important;
+    background-color: var(--main-blue) !important;
+}
 /* front page styles */
         /* use flex for the boxes? idk? just for larger size probably*/
 
