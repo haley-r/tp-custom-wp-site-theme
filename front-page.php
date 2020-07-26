@@ -7,7 +7,8 @@
 <?php
 while (have_posts()) {
     the_post(); ?>
-    <h1 class="page-title"><?php the_title(); ?></h1>
+    <h1 class="page-title"><?php the_title(); ?><i class="fa fa-angle-down" aria-hidden="true"></i></h1>
+    <i class="fa fa-angle-down" aria-hidden="true"></i>
     <div class="content-block">
         <?php the_content(); ?>
     </div>
