@@ -6,7 +6,7 @@
             ));
             ?>
         </nav>
-        <p>&copy copyright Tim Phillips Law 2020</p>
+        <p>&copy copyright Law Office of Tim Phillips 2020</p>
     </footer>
 
     <?php wp_footer(); ?>
