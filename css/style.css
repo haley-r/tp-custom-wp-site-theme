@@ -465,7 +465,9 @@ form button{
     }
 
     /* smaller content boxes (larger margins on side) */
-
+    .content-block{
+        margin: 1rem 8vw 3rem 8vw;
+    }
     /* background image moved up */
      .page-background-image{
         background-size: 100vw 200vh;
