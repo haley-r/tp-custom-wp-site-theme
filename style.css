@@ -5,3 +5,500 @@ Version: 1.0
  */
 
  /* to add image, include file named screenshot.png in this folder */
+
+ /* 3rd party packages */
+@import "normalize.css";
+@import "../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Red+Hat+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+ /* border-box reset from css tricks */
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* CUSTOM STYLES */
+/* sitewide/mobile-first: */
+:root{
+    --main-blue: rgb(4, 34, 43);
+    --main-blue-95: rgba(4, 34, 43, 0.95);
+    }
+ body{
+    font-family: 'Red Hat Display', sans-serif;
+    color: var(--main-blue);
+    background-color: var(--main-blue);
+    padding-top: 120px;
+    /* width: 100vw; */
+    margin: 0 5vw;
+ }
+ .page-background-image{
+     /* CHECK_THIS: maybe get from media background*/
+     background-image: url('/images/occupy_oakland.jpg');
+     background-size: 100vw auto;
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: -10;
+ }
+ .page-background-gradient{
+     background: linear-gradient(0deg, rgb(1, 21, 24) 0%, rgb(1, 21, 24) 20%, rgba(0,0,0,.5) 100%);
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: -10;
+ }
+ a {
+        text-decoration: none;
+        color: inherit;
+    }
+    a:visited {
+        color: inherit;
+        }
+/* header styles */
+ header{
+     color: white;
+     background-color: var(--main-blue-95);
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 90px;;
+     padding: 18px;
+ }
+    header h1 {
+        /* replace with vector logo image instead? */
+        margin: 0;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 32px;
+    }
+        .law-office-of{
+            display: block;
+            font-size: 21.5px;
+            line-height: 21px;;
+            letter-spacing: 8px;
+        }
+    header nav ul{
+        display: none;
+        list-style-type: none;
+        font-size: 2em;
+        padding-left: 0;
+        padding-top: 2em;
+    }
+        header nav ul li {
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        nav ul li:hover {
+            font-weight: bold;
+        }
+        header nav ul ul{
+            display: none;
+        }
+    header nav i{
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        font-size: 20px;
+    }
+    header.header-menu-active{
+        min-height: 100vh;
+        overflow: scroll;
+    }
+        header.header-menu-active ul{
+            display: block;
+        }
+        header.header-menu-active nav ul ul{
+            display: none;
+        }
+/* footer styles */
+footer{
+    color: white;
+}
+    footer nav{
+        width: 80%;
+        margin: 0 auto 50px auto;
+        padding: 2em 0 1em 0;
+        border-top: .5px solid rgb(161, 109, 45);
+        border-bottom: .5px solid rgb(161, 109, 45);
+    }
+    footer nav ul{
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+    footer nav ul li{
+        text-align: center;
+        font-size: 1.4em;
+        margin: 0 3vw 16px 3vw;
+        padding: 0;
+    }
+        footer nav ul li.current-menu-item{
+            display: none;
+        }
+    footer p{
+        text-align: center;
+        color: rgba(219, 230, 233, 0.8);
+    }
+/* page styles */
+.page-title{
+    color: white;
+    font-size: 8vw;
+    text-align: center;
+}
+.content-block{
+    background-color: rgba(219, 230, 233, 0.8);
+    border-radius: 1rem;
+    margin: 1rem 0 3rem 0;
+    padding: 28px;
+    font-size: 22px;
+    box-shadow: 0px 0px 25px var(--main-blue);
+    font-family: 'Red Hat Text', sans-serif;
+}
+    .content-block p{
+        margin-top: 0;
+    }
+        .content-block a{
+            text-decoration: underline;
+        }
+        .content-block a:hover{
+            font-style: italic;
+        }
+    .content-block figure{
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 1em auto;
+    }
+        .content-block figure img{
+            border-radius: 10px;
+        }
+/* practice areas page styles */
+#menu-practice-areas-menu{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 4em;
+}
+    #menu-practice-areas-menu li{
+    background-color: rgba(219, 230, 233, 0.8);
+    border-radius: 2rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 28px;
+    box-shadow: 0px 0px 25px var(--main-blue);
+    }
+    #menu-practice-areas-menu li a{
+        display: block;
+        padding: 16px;
+        text-align: center;
+        width: 100%;
+    }
+    #menu-practice-areas-menu li a:hover{
+        font-weight: bold;
+    }
+/* contact page form styles */
+form label, form input, form textarea, form button{
+    /* CHECK_THIS: a way to do without '!important'? */
+    font-size: 1em !important;
+    font-weight: normal !important;
+    border: none !important;
+    border-radius: 1em !important;
+    width: 100% !important;
+}
+form textarea{
+    min-height: 8em;
+}
+form button{
+    width: 50% !important;
+    margin: 1em 25% 0 25% !important;
+    color: white !important;
+    background-color: var(--main-blue) !important;
+}
+/* front page styles */
+.home{
+    padding-top: 0;
+    margin-top: 0 !important;
+}
+.home .page-title{
+    /* margin: 8rem 0 10rem 0; */
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* margin: 20vh auto 0 auto;  */
+    color: rgb(219, 230, 233);
+    font-size: 11.5vw;
+    padding: 45vh 2vw 2vw 2vw;
+    font-weight: bolder;
+    text-align: left;
+}
+.home h1 i{
+    display: block;
+    color: rgba(161, 109, 45, .5);
+    margin: 0;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    z-index: -5;
+}
+.home h3{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 6vw;
+}
+.home .content-block{
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+}
+    .home .wp-block-group{
+        background-color: rgba(219, 230, 233, 0.8);
+        box-shadow: 0px 0px 25px var(--main-blue);
+        border-radius: 1rem;
+        margin: 1rem 2vw 5rem 2vw;
+        padding: 1em 18px 0 18px;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+        .home .wp-block-group h3{
+            font-size: 6.3vw;
+        }
+        .home .wp-block-group ul{
+            list-style-type: none;
+            padding-bottom: .75em;
+            padding-left: 0;
+            margin: 1em 0 0 0;
+            font-size: 5.2vw;
+        }
+            .home .wp-block-group ul li{
+                text-align: center;
+                margin: 1.25em 0;
+            }
+/* testimonials page styles */
+.testimonials{
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+    .testimonials blockquote{
+        background-color: rgba(219, 230, 233, .9);
+        box-shadow: 0px 0px 25px var(--main-blue-95);
+        border-radius: 1rem;
+        margin: 0 0 2em 0;
+        padding: 1em 18px 1em 18px;
+        font-family: 'Red Hat Display', sans-serif;
+        width: 100%;
+    }
+    /* .testimonials blockquote:hover{
+        background-color: var(--main-blue-95);
+        box-shadow: 0px 0px 25px rgba(219, 230, 233, .15);;
+        color: rgb(219, 230, 233);
+    } */
+        .testimonials blockquote p{
+            margin: 0;
+            font-size: 1em;
+        }
+        .testimonials blockquote cite{
+            display: block;
+            text-align: right;
+            width: 100%;
+            margin-top: .25em;
+            padding-right: 1em;
+            font-size: .9em;
+        }
+    .testimonials>p{
+        color: rgba(219, 230, 233, 0.8);
+        font-size: .7em;
+        padding: 1em;
+        margin-bottom: 4em;
+    }
+/* blog styles */
+
+/* blog post styles */
+
+/* tablet/medium screen size styles */
+@media screen and (min-width: 600px){
+    /* home page block groups smaller text */
+    .home .page-title{
+        font-size: 9vw;
+        padding-top: 30vh;
+    }
+            .home .wp-block-group h3{
+                font-size: 1.2em;
+            }
+            .home .wp-block-group ul{
+                font-size: 1em;
+            }
+            .home .wp-block-group ul li{
+                margin-bottom: 1.75em;
+            }
+    /* smaller minimum comment box height and full width fields */
+    form label, form input, form textarea, form button{
+        max-width: none !important;
+    }
+    form textarea{
+        min-height: 5em;
+    }
+}
+/* desktop/large screen size styles */
+@media screen and (min-width: 950px){
+    /* smaller proportionally h1 */
+    .page .page-title{
+        font-size: 3em;
+    }
+    .home .page-title{
+        font-size: 5.4vw;
+        padding-top: 32vh;
+        margin: 0;
+    }
+    /* front page blocks with flexbox instead of stacked */
+    .home .content-block{
+        display: flex;
+        margin: 0 0 4em 0;
+    }
+        .home .content-block .wp-block-group:first-child{
+            margin: 0;
+        }
+        .home .content-block .wp-block-group{
+            margin: 0 0 0 2vw;
+            width: 33%;
+        }
+        .home .wp-block-group h3{
+                font-size: 2vw;
+            }
+            .home .wp-block-group ul{
+                font-size: 1em;
+                padding: 0;
+            }
+            .home .wp-block-group ul li{
+                margin-bottom: 1em;
+            }
+    /* testimonials quotes with css grid instead of stacked */
+        /* .grid .wp-block-quote{
+            width: 25%;
+        } */
+        .testimonials{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+    }
+        .testimonials blockquote{
+            width: 23%;
+            margin: 0 2% 1em 0;
+            flex-grow: 3;
+            flex-shrink: 3;
+        } 
+    /* images like portrait float right, vertical aspect ratio */
+        .wp-block-image{
+            float: right;
+            width: 300px !important;
+            padding: 0 0 1em 1em;
+            /* height: 250px; */
+            margin: 0 !important;
+        }
+            figure img{
+                height: 300px;
+                object-fit: cover;
+                object-position: right;
+                overflow: hidden;
+                /* height: 100%; */
+
+            }
+    /* content minimum height */
+        .content-block{
+            min-height: 360px;
+        }
+}
+@media screen and (min-width: 1100px){
+    /* full menu shown on top bar */
+    header nav ul{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        list-style-type: none;
+        font-size: 1.2em;
+        padding: 0;
+        margin: 0 1em 0 0;
+    }
+        header nav ul li {
+            display: block;
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 1em 2vw;
+            text-align: center;
+            text-transform: uppercase;
+            /* font-weight: bold; */
+        }
+        nav ul li:hover, nav ul li:focus, nav ul .current-menu-item {
+            font-weight: normal;
+            color: rgb(161, 109, 45);
+        }
+        header nav ul li ul{
+            background-color: rgba(219, 230, 233, .9);
+            display: none;
+            position: absolute;
+            height: 8em;
+            width: 260px;
+            top: 2.6em;
+            left: -1.5em;
+            font-size: 1em;
+        }
+            header nav ul li{
+                font-size: .9em;
+            }
+            header nav ul li:hover ul{
+                display: block;
+            }
+            header nav ul li ul li{
+                text-transform: none;
+                font-size: 1.2em;
+                text-align: center;
+                width: 100%;
+                color: var(--main-blue);
+                display: block;
+                padding: .5em;
+            }
+    #menu-toggle-icon{
+        display:none;
+    }
+
+    /* smaller content boxes (larger margins on side) */
+    .content-block{
+        margin: 1rem 8vw 3rem 8vw;
+    }
+    /* background image moved up */
+     .page-background-image{
+        background-size: 100vw 200vh;
+        width: 100vw;
+        height: 120vh;
+        top: -20vh;
+        }
+     .testimonials{
+        width: 83%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+    }
+        .testimonials blockquote{
+            width: 23%;
+            margin-right: 2%;
+            flex-grow: 3;
+            flex-shrink: 3;
+        } 
+}
+
+
+    
