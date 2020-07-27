@@ -385,7 +385,58 @@ form button{
 }
 @media screen and (min-width: 1100px){
     /* full menu shown on top bar */
-    
+    header nav ul{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        list-style-type: none;
+        font-size: 1.2em;
+        padding: 0;
+        margin: 0 1em 0 0;
+    }
+        header nav ul li {
+            display: block;
+            float: left;
+            position: relative;
+            margin: 0;
+            padding: 1em 2vw;
+            text-align: center;
+            text-transform: uppercase;
+            /* font-weight: bold; */
+        }
+        nav ul li:hover, nav ul li:focus, nav ul .current-menu-item {
+            font-weight: normal;
+            color: rgb(161, 109, 45);
+        }
+        header nav ul li ul{
+            background-color: rgba(219, 230, 233, .9);
+            display: none;
+            position: absolute;
+            height: 8em;
+            width: 260px;
+            top: 2.6em;
+            left: -1em;
+            font-size: 1em;
+        }
+            header nav ul li:hover{
+            }
+            header nav ul li:hover ul{
+                display: block;
+            }
+            header nav ul li ul li{
+                text-transform: none;
+                font-size: 1.2em;
+                text-align: center;
+                width: 100%;
+                color: var(--main-blue);
+                display: block;
+                padding: .5em;
+            }
+    #menu-toggle-icon{
+        display:none;
+    }
+
     /* smaller content boxes (larger margins on side) */
 
     /* background image moved up */
