@@ -156,6 +156,12 @@ footer{
     .content-block p{
         margin-top: 0;
     }
+        .content-block a{
+            text-decoration: underline;
+        }
+        .content-block a:hover{
+            font-style: italic;
+        }
     .content-block figure{
         width: 100%;
         max-width: 500px;
