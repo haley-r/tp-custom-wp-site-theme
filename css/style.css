@@ -369,6 +369,26 @@ form button{
         .grid .wp-block-quote{
             width: 25%;
         }
+    /* images like portrait float right, vertical aspect ratio */
+        .wp-block-image{
+            float: right;
+            width: 300px !important;
+            padding: 0 0 1em 1em;
+            /* height: 250px; */
+            margin: 0 !important;
+        }
+            figure img{
+                height: 300px;
+                object-fit: cover;
+                object-position: right;
+                overflow: hidden;
+                /* height: 100%; */
+
+            }
+    /* content minimum height */
+        .content-block{
+            min-height: 360px;
+        }
     /* .testimonials{
         display: flex;
         flex-flow: column wrap;
@@ -416,10 +436,11 @@ form button{
             height: 8em;
             width: 260px;
             top: 2.6em;
-            left: -1em;
+            left: -1.5em;
             font-size: 1em;
         }
-            header nav ul li:hover{
+            header nav ul li{
+                font-size: .9em;
             }
             header nav ul li:hover ul{
                 display: block;
